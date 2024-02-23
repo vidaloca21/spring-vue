@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.article.dao.ArticleDAO">
+
+    <select id="getAllArticle"
+            resultType="com.demo.article.vo.ArticleVO">
+        SELECT ARTICLE_ID
+             , UPPER_ARTICLE_ID
+             , ARTICLE_TITLE
+             , ARTICLE_CONTENT
+             , VIEW_CNT
+             , ARTICLE_PASSWORD
+             , ARTICLE_SALT
+          FROM ARTICLE
+    </select>
+
+    <select id="getAllArticleCnt"
+            resultType="_int">
+        SELECT COUNT(1)
+          FROM ARTICLE
+    </select>
+</mapper>

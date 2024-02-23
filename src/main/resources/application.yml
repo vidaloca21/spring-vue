@@ -1,0 +1,19 @@
+spring:
+    datasource:
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@localhost:1521:XE
+        username: CAFE
+        password: 0911
+    aop:
+        proxy-target-class: false
+# encoding
+server:
+    port: 8081
+    servlet:
+        encoding:
+            charset: UTF-8
+            force: true
+            enabled: true
+mybatis:
+    config-location: classpath:mybatis/mybatis-config.xml
+    mapper-locations: classpath:com/demo/**/dao/mapper/*.xml
